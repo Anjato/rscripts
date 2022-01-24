@@ -8,7 +8,6 @@ Python scripts for RS3 and OSRS. Decided to move the C++ versions over to Python
 
 
 ## Scripts
-
 ### RS3
 
 - [X] 2 Tick Divination
