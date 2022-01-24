@@ -7,8 +7,9 @@ Python scripts for RS3 and OSRS. Decided to move the C++ versions over to Python
 2 tick Divination for RuneScape 3. Join **_CoreHunting_** FC to take full advantage of this.
 
 
+## Scripts
 
-## RS3
+### RS3
 
 - [X] 2 Tick Divination
 - [ ] Clockwork
@@ -18,7 +19,7 @@ Python scripts for RS3 and OSRS. Decided to move the C++ versions over to Python
 - [ ] Portable Cooking
 
 
-## OSRS
+### OSRS
 
 - [ ] Fletching
 - [ ] Crafting
