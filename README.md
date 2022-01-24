@@ -17,9 +17,10 @@ Python scripts for RS3 and OSRS. Decided to move the C++ versions over to Python
 - [ ] Portable Firemaking
 - [ ] Portable Cooking
 
+<br/>
+<br/>
 
-### OSRS
-
+![alt text](https://camo.githubusercontent.com/044fb963f625fbd36ee4146fba210b74d804fe66523459743e1e1fad035b1d83/687474703a2f2f7777772e73696d706c65696d616765726573697a65722e636f6d2f5f75706c6f6164732f70686f746f732f62323736393664302f6f7372732d6c6f676f5f315f31352e706e67)
 - [ ] Fletching
 - [ ] Crafting
 - [ ] Construction? big maybe
