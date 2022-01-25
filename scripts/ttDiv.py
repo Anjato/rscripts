@@ -29,7 +29,9 @@ def on_press(key, x, y):
     if "{}".format(key) == "Key.insert":
         if not running:
             running = True
-            threading.Thread(target=process, args=[x, y]).start()
+            t = threading.Thread(target=process, args=[x, y])
+            t.daemon = True
+            t.start()
 
     elif "{}".format(key) == "Key.home":
         if not running:
