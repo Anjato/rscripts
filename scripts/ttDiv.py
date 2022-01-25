@@ -8,36 +8,33 @@ import cursor
 
 
 running = False
-x, y = pyautogui.position()
 
 
-def main():
-
+def main(x, y):
     cursor.hide()
 
     clear()
     print('Press "insert" to start.')
     print('Press "delete" to stop.')
     print('Press "home" to save new coordinates.')
-    print('\nX:', x, 'Y:', y, '          ', end='\r')
+    print('\nX:', x, 'Y:', y)
 
-    with Listener(on_press=on_press) as listener:
+    with Listener(on_press=lambda event: on_press(event, x, y)) as listener:
         listener.join()
 
 
-def on_press(key):
+def on_press(key, x, y):
     global running
-    global x, y
 
     if "{}".format(key) == "Key.insert":
         if not running:
             running = True
-            threading.Thread(target=process).start()
+            threading.Thread(target=process, args=[x, y]).start()
 
     elif "{}".format(key) == "Key.home":
         if not running:
             x, y = pyautogui.position()
-            print('\rX:', x, 'Y:', y, '          ', end='\r')
+            main(x, y)
         if running:
             pass
 
@@ -46,18 +43,11 @@ def on_press(key):
             running = False
 
 
-def process():
-    clear()
-    print('Press "delete" to stop.')
-    print('\nX:', x, 'Y:', y, '          ', end='\r')
+def process(x, y):
 
     while running:
-        pyautogui.click(x + random.randint(0, 20), y + random.randint(5, 20))
+        pyautogui.click(x + random.randint(0, 8), y + random.randint(0, 10))
         sleep(1 + random.gauss(0.1, 0.1))
-
-    clear()
-    print('Press "insert" to start.')
-    print('\nX:', x, 'Y:', y, '          ', end='\r')
 
 
 def clear():
