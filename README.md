@@ -3,7 +3,7 @@ Python scripts for RS3 and OSRS. Decided to move the C++ versions over to Python
 
 ## Scripts
 
-![alt text](https://camo.githubusercontent.com/ab0920b3bf41df826c18cd5d554f3bb8a380e9f0b676ca26efb31e69378f3363/687474703a2f2f7777772e73696d706c65696d616765726573697a65722e636f6d2f5f75706c6f6164732f70686f746f732f62323736393664302f72756e6573636170652d69636f6e2d325f33302e706e67)
+![RS3](https://i.imgur.com/C5I8bHw_d.webp?maxwidth=760&fidelity=grand)
 - [X] 2 Tick Divination
 - [ ] Clockwork
 - [ ] Portable Crafting
@@ -14,7 +14,7 @@ Python scripts for RS3 and OSRS. Decided to move the C++ versions over to Python
 <br/>
 <br/>
 
-![alt text](https://static.wikia.nocookie.net/2007scape/images/a/a3/RuneScape_2_logo.png/revision/latest?cb=20170717001208)
+![OSRS](https://i.imgur.com/4amk6HP_d.webp?maxwidth=760&fidelity=grand)
 - [ ] Fletching
 - [ ] Crafting
 - [ ] Construction? big maybe
