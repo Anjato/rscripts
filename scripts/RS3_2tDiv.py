@@ -12,6 +12,7 @@ running = False
 
 def main(x, y):
     cursor.hide()
+    x, y = pyautogui.position()
 
     clear()
     print('Press "insert" to start.')

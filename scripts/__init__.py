@@ -1,1 +1,1 @@
-__all__ = ['ttDiv']
+__all__ = ['RS3_2tDiv']

@@ -1,36 +1,34 @@
 from scripts import *
 from time import sleep
-import pyautogui
 
 
 def main():
 
-    ttDiv.clear()
+    RS3_2tDiv.clear()
 
-    scripts = {1: '2tDiv', 2: 'Test'}
+    scripts = {1: 'RS3_2tDiv', 2: 'Test'}
 
     for key, value in scripts.items():
         print(key, "=", value)
 
     try:
-        x, y = pyautogui.position()
-        z = int(input())
+        x = int(input())
 
-        if z == 1:
-            ttDiv.main(x, y)
-        elif z == 2:
-            ttDiv.clear()
+        if x == 1:
+            RS3_2tDiv.main(0, 0)
+        elif x == 2:
+            RS3_2tDiv.clear()
             print('Test! :)')
             sleep(2)
             main()
         else:
-            ttDiv.clear()
+            RS3_2tDiv.clear()
             print("Invalid input, please try again!")
             sleep(2)
             main()
 
     except ValueError:
-        ttDiv.clear()
+        RS3_2tDiv.clear()
         print("Input is not an integer, dumbass!")
         sleep(2)
         main()
