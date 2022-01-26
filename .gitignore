@@ -10,3 +10,6 @@
 *.txt
 # idea folder
 /.idea/
+# Python cache folders
+/__pycache__/
+/scripts/__pycache__/
