@@ -49,7 +49,7 @@ def on_press(key, x, y):
 def process(x, y):
 
     while running:
-        pyautogui.click(x + random.randint(0, 8), y + random.randint(0, 10))
+        pyautogui.click(x + random.gauss(0, 3), y + random.gauss(0, 2))
         sleep(1 + random.gauss(0.1, 0.1))
 
 
