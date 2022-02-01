@@ -24,6 +24,7 @@ Python scripts for RS3 and OSRS. Decided to move the C++ versions over to Python
 <br/>
 
 ![OSRS](https://i.imgur.com/4amk6HP_d.webp?maxwidth=760&fidelity=grand)
+### *These may actually be OpenOSRS plugins instead in order to make more fun stuff like bosses, raids, etc.*
 - [ ] Fletching
 - [ ] Crafting
 - [ ] Blast Furnace
