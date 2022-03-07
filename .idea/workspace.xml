@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00e0dc1a-6324-4641-9f9f-232afc756315" name="Changes" comment="idk">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/RS3_2tDiv.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/RS3_2tDiv.py" afterDir="false" />
-    </list>
+    <list default="true" id="00e0dc1a-6324-4641-9f9f-232afc756315" name="Changes" comment="added escape key for kill event" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +114,7 @@
       <workItem from="1643730271723" duration="2233000" />
       <workItem from="1643884107095" duration="1309000" />
       <workItem from="1646686203857" duration="82000" />
-      <workItem from="1646686358570" duration="1281000" />
+      <workItem from="1646686358570" duration="1772000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1643031553425</created>
@@ -189,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646687261199</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added escape key for kill event">
+      <created>1646687930544</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1646687930544</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +227,8 @@
     <MESSAGE value="standard deviation instead of randint" />
     <MESSAGE value="got rid of ugly global variable and using threading event instead" />
     <MESSAGE value="idk" />
-    <option name="LAST_COMMIT_MESSAGE" value="idk" />
+    <MESSAGE value="added escape key for kill event" />
+    <option name="LAST_COMMIT_MESSAGE" value="added escape key for kill event" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rscripts$main.coverage" NAME="main Coverage Results" MODIFIED="1646687098906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
