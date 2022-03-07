@@ -5,6 +5,7 @@ import os
 from time import sleep
 import random
 import cursor
+import sys
 
 
 def main(x, y):
@@ -18,6 +19,7 @@ def main(x, y):
     clear()
     print('Press "insert" to start.')
     print('Press "delete" to stop.')
+    print('Press "escape" to exit.')
     print('Press "home" to save new coordinates.')
     print('\nX:', x, 'Y:', y)
 
@@ -45,12 +47,19 @@ def on_press(key, x, y, flag_event, kill_event):
         if flag_event.is_set():
             flag_event.clear()
 
+    elif "{}".format(key) == "Key.esc":
+        kill_event.set()
+        if kill_event.is_set():
+            sys.exit(0)
+
 
 def process(x, y, flag_event, kill_event):
 
     while flag_event.is_set():
         pyautogui.click(x + random.gauss(0, 3), y + random.gauss(0, 2))
         sleep(1 + random.gauss(0.1, 0.1))
+        if kill_event.set():
+            sys.exit(0)
 
 
 def clear():
