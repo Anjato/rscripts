@@ -1,3 +1,4 @@
+from scripts import *
 from time import sleep
 import os, glob
 
