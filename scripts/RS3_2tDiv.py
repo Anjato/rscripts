@@ -8,7 +8,7 @@ import cursor
 import sys
 
 
-def main(x, y):
+def main(*args):
 
     kill_event = Event()
     flag_event = Event()
