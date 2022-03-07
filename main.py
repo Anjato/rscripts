@@ -1,12 +1,27 @@
 from scripts import *
 from time import sleep
+import os, glob
 
 
 def main():
 
     RS3_2tDiv.clear()
 
-    scripts = {1: 'RS3_2tDiv', 2: 'Test'}
+    path = 'scripts/'
+    scripts = {}
+
+    i = 1
+
+    try:
+        os.chdir(path)
+    except EnvironmentError:
+        pass
+
+    for file in glob.glob("*.py"):
+        if not file == "__init__.py":
+            modules = file.replace('.py', '')
+            scripts[i] = modules
+            i += 1
 
     for key, value in scripts.items():
         print(key, "=", value)
@@ -14,18 +29,11 @@ def main():
     try:
         x = int(input())
 
-        if x == 1:
-            RS3_2tDiv.main(0, 0)
-        elif x == 2:
-            RS3_2tDiv.clear()
-            print('Test! :)')
-            sleep(2)
-            main()
+        if x in scripts:
+            eval(scripts[x]+".main()")
         else:
-            RS3_2tDiv.clear()
-            print("Invalid input, please try again!")
+            print("Value does not exist. Try again.")
             sleep(2)
-            main()
 
     except ValueError:
         RS3_2tDiv.clear()
