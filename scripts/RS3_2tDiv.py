@@ -1,4 +1,4 @@
-import threading
+from threading import Thread, Event
 import pyautogui
 from pynput.keyboard import Listener
 import os
@@ -7,10 +7,11 @@ import random
 import cursor
 
 
-running = False
-
-
 def main(x, y):
+
+    kill_event = Event()
+    flag_event = Event()
+
     cursor.hide()
     x, y = pyautogui.position()
 
@@ -20,35 +21,34 @@ def main(x, y):
     print('Press "home" to save new coordinates.')
     print('\nX:', x, 'Y:', y)
 
-    with Listener(on_press=lambda event: on_press(event, x, y)) as listener:
+    with Listener(on_press=lambda event: on_press(event, x, y, flag_event, kill_event)) as listener:
         listener.join()
 
 
-def on_press(key, x, y):
-    global running
+def on_press(key, x, y, flag_event, kill_event):
 
     if "{}".format(key) == "Key.insert":
-        if not running:
-            running = True
-            t = threading.Thread(target=process, args=[x, y])
+        if not flag_event.is_set():
+            flag_event.set()
+            t = Thread(target=process, args=[x, y, flag_event, kill_event])
             t.daemon = True
             t.start()
 
     elif "{}".format(key) == "Key.home":
-        if not running:
+        if not flag_event.is_set():
             x, y = pyautogui.position()
             main(x, y)
-        if running:
+        if flag_event.is_set():
             pass
 
     elif "{}".format(key) == "Key.delete":
-        if running:
-            running = False
+        if flag_event.is_set():
+            flag_event.clear()
 
 
-def process(x, y):
+def process(x, y, flag_event, kill_event):
 
-    while running:
+    while flag_event.is_set():
         pyautogui.click(x + random.gauss(0, 3), y + random.gauss(0, 2))
         sleep(1 + random.gauss(0.1, 0.1))
 
