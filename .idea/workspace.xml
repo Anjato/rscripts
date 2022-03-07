@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00e0dc1a-6324-4641-9f9f-232afc756315" name="Changes" comment="update">
+    <list default="true" id="00e0dc1a-6324-4641-9f9f-232afc756315" name="Changes" comment="standard deviation instead of randint">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/RS3_2tDiv.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/RS3_2tDiv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +113,12 @@
       <workItem from="1643357101153" duration="343000" />
       <workItem from="1643357452921" duration="442000" />
       <workItem from="1643465063476" duration="1524000" />
-      <workItem from="1643517206018" duration="947000" />
+      <workItem from="1643517206018" duration="6231000" />
+      <workItem from="1643524236934" duration="706000" />
+      <workItem from="1643730271723" duration="2233000" />
+      <workItem from="1643884107095" duration="1309000" />
+      <workItem from="1646686203857" duration="82000" />
+      <workItem from="1646686358570" duration="842000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1643031553425</created>
@@ -162,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643357652569</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="standard deviation instead of randint">
+      <created>1643518176578</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1643518176578</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,10 +207,11 @@
     <MESSAGE value="images" />
     <MESSAGE value="I don't even know" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="standard deviation instead of randint" />
+    <option name="LAST_COMMIT_MESSAGE" value="standard deviation instead of randint" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/rscripts$main.coverage" NAME="main Coverage Results" MODIFIED="1643326403148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/rscripts$main.coverage" NAME="main Coverage Results" MODIFIED="1646687098906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RS3$main.coverage" NAME="main Coverage Results" MODIFIED="1643023917819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
