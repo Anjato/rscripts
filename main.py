@@ -1,11 +1,14 @@
-from scripts import *
 from time import sleep
 import os, glob
 
 
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+
 def main():
 
-    RS3_2tDiv.clear()
+    clear()
 
     path = 'scripts/'
     scripts = {}
@@ -36,7 +39,7 @@ def main():
             sleep(2)
 
     except ValueError:
-        RS3_2tDiv.clear()
+        clear()
         print("Input is not an integer, dumbass!")
         sleep(2)
         main()
