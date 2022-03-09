@@ -21,8 +21,8 @@ def main():
     except EnvironmentError:
         pass
 
-    for file in glob.glob("*.py"):
-        if not file == "__init__.py":
+    for file in glob.glob('*.py'):
+        if not file == '__init__.py':
             modules = file.replace('.py', '')
             scripts[i] = modules
             i += 1
@@ -36,14 +36,15 @@ def main():
         if x in scripts:
             eval(scripts[x]+".main()")
         else:
-            print("Value does not exist. Try again.")
+            print('Value does not exist. Try again.')
             sleep(2)
 
     except ValueError:
         clear()
-        print("Input is not an integer, dumbass!")
+        print('Input is not an integer, dumbass!')
         sleep(2)
         main()
 
 
-main()
+if __name__ == '__main__':
+    main()
