@@ -64,3 +64,8 @@ def process(x, y, flag_event, kill_event):
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
+
+
+if __name__ == '__main__':
+    print('ERROR: Cannot run module directly. Please run the main loader.')
+    os.system('pause' if os.name == 'nt' else 'read -s -n 1 -p "Press any key to continue..."')
