@@ -1,6 +1,7 @@
 from scripts import *
 from time import sleep
-import os, glob
+import os
+import glob
 
 
 def clear():
@@ -26,6 +27,12 @@ def main():
             modules = file.replace('.py', '')
             scripts[i] = modules
             i += 1
+    user_input(scripts)
+
+
+def user_input(scripts):
+
+    clear()
 
     for key, value in scripts.items():
         print(key, "=", value)
@@ -38,12 +45,13 @@ def main():
         else:
             print('Value does not exist. Try again.')
             sleep(2)
+            user_input(scripts)
 
     except ValueError:
         clear()
         print('Input is not an integer, dumbass!')
         sleep(2)
-        main()
+        user_input(scripts)
 
 
 if __name__ == '__main__':
