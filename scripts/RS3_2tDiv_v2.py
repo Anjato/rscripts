@@ -1,5 +1,5 @@
 from functools import partialmethod
-from threading import Event, Thread
+from threading import Thread
 import pyautogui
 from pynput import keyboard
 import os
@@ -31,29 +31,31 @@ class Hotkeys:
             self.set_alive()
             t = Thread(target=self.process, args=[self.x, self.y])
             t.daemon = True
-            print(f'<insert> pressed & flag = {self.alive}')
             t.start()
+        else:
+            pass
 
     def hotkey_home(self):
-        print(f'<home> pressed & flag = {self.alive}')
-        self.x, self.y = pyautogui.position()
-        self.info()
+        if not self.alive:
+            self.x, self.y = pyautogui.position()
+            self.info()
+        else:
+            pass
 
 
     def hotkey_del(self):
         if not self.alive:
-            print(f'<delete> pressed & flag cleared. Flag = {self.alive}')
+            pass
         else:
             self.set_dead()
-            print(f'<delete> pressed & clearing flag. Flag = {self.alive}')
 
     def hotkey_esc(self):
-        print('<esc> pressed!')
+        sys.exit(0)
 
     def process(self, x, y):
         while self.alive:
-            print(f'Looping... Flag = {self.alive}')
-            sleep(1)
+            pyautogui.click(x + random.gauss(0, 3), y + random.gauss(0, 2))
+            sleep(1 + random.gauss(0.1, 0.1))
             if not self.alive:
                 break
 
